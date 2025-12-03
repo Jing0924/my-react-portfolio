@@ -33,7 +33,7 @@ function Projects() {
       <h2 className="projects-title">我的作品</h2>
       <div className="projects-grid">
         {projectList.map((project) => (
-          <div className="project-card" key={project.title}>
+          <div className="project-card" key={project.title } data-aos="fade-up">
             <img
               src={project.image}
               alt={project.title}
