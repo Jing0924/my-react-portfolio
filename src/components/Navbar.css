@@ -1,0 +1,93 @@
+/* src/components/Navbar.css */
+
+/* src/components/Navbar.css */
+
+.navbar {
+  /* ... 原有的設定 (display, justify-content 等) 保留 ... */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* 建議：可以加點透明度例如 rgba(51, 51, 51, 0.95) */
+  padding: 10px 20px;
+  color: white;
+
+  /* 👇 新增以下設定讓它固定 */
+  position: fixed;    /* 1. 把它釘在螢幕上 */
+  top: 0;             /* 2. 貼齊最上面 */
+  left: 0;            /* 3. 貼齊最左邊 */
+  width: 100%;        /* 4. 寬度佔滿整個螢幕 */
+  z-index: 1000;      /* 5. 確保它在最上層，不會被圖片蓋住 */
+  box-sizing: border-box; /* 6. 確保 padding 不會讓寬度爆掉導致橫向卷軸 */
+}
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;          /* 去除清單前面的小圓點 */
+    display: flex;             /* 讓選單裡的 li 也變成橫排 */
+    gap: 20px;                 /* 每個選項之間保持 20px 的間距 */
+    padding: 0;                /* 清除 ul 預設的內距 */
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;     /* 去除連結預設的底線 */
+    font-size: 1rem;
+  }
+  
+  /* 滑鼠移過去的效果 (Hover) */
+  .navbar-links a:hover {
+    color: #61dafb;            /* 滑鼠碰到時變亮藍色 */
+  }
+
+  /* src/components/Navbar.css */
+/* ... 保留原本上面的所有設定 ... */
+
+/* 1. 預設 (電腦版)：隱藏漢堡按鈕 */
+.menu-icon {
+  display: none; /* 平常不顯示 */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* 2. 手機版設定 (當螢幕寬度小於 768px 時) */
+@media (max-width: 768px) {
+  
+  /* 顯示漢堡按鈕 */
+  .menu-icon {
+    display: block;
+  }
+
+  /* 修改選單列表 (原本是橫排，現在要變直排抽屜) */
+  .navbar-links {
+    position: absolute; /* 絕對定位：脫離原本排版 */
+    top: 100%;          /* 接在導覽列正下方 */
+    left: -100%;        /* 關鍵：預設藏在螢幕「最左邊」外面 */
+    width: 100%;        /* 寬度佔滿 */
+    height: 100vh;      /* 高度佔滿螢幕 */
+    background-color: rgba(0, 0, 0, 0.9)
+    ; /* 背景色 */
+    
+    flex-direction: column; /* 變成直排 */
+    align-items: center;    /* 水平置中 */
+    justify-content: flex-start; /* 靠上對齊 */
+    padding-top: 50px;
+    
+    transition: left 0.3s ease; /* 加入滑動動畫 */
+  }
+
+  /* 每個連結的間距加大 */
+  .navbar-links li {
+    margin: 20px 0;
+  }
+
+  /* 🔥 狀態被啟動時的樣式 🔥 */
+  /* 當 React 加上 "active" class 時，把它移回螢幕中間 */
+  .navbar-links.active {
+    left: 0;
+  }
+}

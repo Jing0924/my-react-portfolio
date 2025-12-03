@@ -1,0 +1,75 @@
+/* src/components/Contact.css */
+
+.contact-section {
+    padding: 100px 20px 20px; /* 上 100, 左右 20, 下 20 */
+    background-color: #222;
+    color: white;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #61dafb;
+    margin-bottom: 20px;
+  }
+  
+  .contact-text {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #ccc;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+/* src/components/Contact.css */
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 按鈕間距稍微縮小一點 */
+    margin-bottom: 80px;
+    flex-wrap: wrap; /* 關鍵：如果螢幕太小，允許按鈕自動換行，不會擠爆 */
+  }
+  
+  /* 按鈕樣式 (我們可以保持原本的，或是稍微加寬一點點) */
+  .contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #61dafb;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s; /* 讓所有變化都有動畫 */
+    
+    /* 確保按鈕寬度不會忽大忽小，看起來比較整齊 */
+    min-width: 120px; 
+  }
+  
+  .contact-btn:hover {
+    background-color: #4fa8d1;
+    transform: translateY(-3px); /* 滑鼠移上去稍微浮起來，更有互動感 */
+  }
+  
+  /* 社交連結文字樣式 */
+  .social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  .social-link:hover {
+    border-bottom: 1px solid #61dafb; /* 滑鼠移上去出現底線 */
+    color: #61dafb;
+  }
+  
+  .footer {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    color: #777;
+    font-size: 0.9rem;
+  }

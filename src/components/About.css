@@ -1,0 +1,70 @@
+/* src/components/About.css */
+
+.about-section {
+    padding: 100px 20px;
+    background-color: #2a2a2a; /* 比背景稍微亮一點點的灰色，做出層次感 */
+    color: white;
+  }
+  
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto; /* 水平置中 */
+  }
+  
+  /* 讓文字和技能左右排版 (在大螢幕時) */
+  .about-content {
+    display: flex;
+    flex-direction: column; /* 手機版預設是直排 */
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  /* 媒體查詢 (Media Query): 當螢幕寬度大於 768px (平板/電腦) 時，變成橫排 */
+  @media (min-width: 768px) {
+    .about-content {
+      flex-direction: row; /* 變成橫排 */
+      align-items: flex-start;
+    }
+    
+    .about-text, .skills-container {
+      flex: 1; /* 左右各佔一半寬度 */
+    }
+  }
+  
+  .about-text p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ddd;
+    font-size: 1.1rem;
+  }
+  
+  .skills-title {
+    color: #61dafb;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  /* 技能標籤區塊 */
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap; /* 如果一行放不下，自動換行 */
+    gap: 15px;
+  }
+  
+  /* 膠囊標籤樣式 */
+  .skill-tag {
+    background-color: #333;
+    color: #61dafb;
+    border: 1px solid #61dafb;
+    padding: 8px 16px;
+    border-radius: 20px; /* 大圓角 */
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    cursor: default; /* 滑鼠移上去變成普通游標 */
+  }
+  
+  .skill-tag:hover {
+    background-color: #61dafb;
+    color: #222;
+    transform: scale(1.1); /* 滑鼠移上去稍微放大 */
+  }

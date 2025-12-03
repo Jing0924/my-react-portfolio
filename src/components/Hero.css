@@ -1,0 +1,86 @@
+/* src/components/Hero.css */
+
+.hero {
+    display: flex;
+    justify-content: center; /* 水平置中整個區塊 */
+    align-items: center;     /* 垂直置中 */
+    padding: 100px 20px;     /* 上下留寬一點，看起來比較大器 */
+    background-color: #222;  /* 跟背景色一樣，或者稍微淺一點 */
+    color: white;
+    gap: 50px;               /* 圖片跟文字中間的距離 */
+    max-width: 1000px;       /* 限制最大寬度，以免在大螢幕上太開 */
+    margin: 0 auto;          /* 讓整個 hero 區塊在畫面中置中 */
+  }
+  
+  /* 文字區域設定 */
+  .hero-content {
+    max-width: 500px;        /* 限制文字寬度，比較好閱讀 */
+    text-align: left;        /* 文字靠左對齊 */
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #61dafb;          /* React 藍 */
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #aaa;             /* 灰色副標題 */
+    margin-bottom: 20px;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;        /* 行高，讓多行文字比較好讀 */
+    margin-bottom: 30px;
+  }
+  
+  /* 按鈕樣式 (重點！) */
+  .hero-btn {
+    display: inline-block;
+    background-color: #61dafb;
+    color: #222;
+    padding: 12px 30px;
+    text-decoration: none;   /* 去除連結底線 */
+    font-weight: bold;
+    border-radius: 5px;      /* 圓角按鈕 */
+    transition: background-color 0.3s; /* 動畫過渡效果 */
+  }
+  
+  .hero-btn:hover {
+    background-color: #4fa8d1; /* 滑鼠移上去變深一點 */
+  }
+  
+  /* 圖片樣式 */
+/* 1. 外面的相框：負責形狀和大小 */
+.hero-img-frame {
+    width: 300px;           /* 固定框框大小 */
+    height: 300px;
+    border-radius: 50%;     /* 變成圓形 */
+    border: 5px solid #61dafb; /* 邊框 */
+    
+    /* 🔥 關鍵指令：溢位隱藏 🔥 */
+    /* 這行告訴瀏覽器：「只要內容超出這個框框的範圍，就把它切掉！」 */
+    overflow: hidden;
+  }
+  
+  /* 2. 裡面的圖片：負責填滿和縮放 */
+  .hero-img {
+    width: 100%;            /* 寬度佔滿相框 */
+    height: 100%;           /* 高度佔滿相框 */
+    object-fit: cover;      /* 保持比例填滿 */
+    object-position: center; /* 對準位置 (可以保留你上次調好的) */
+    
+    /* 🔥 縮放主角：transform: scale() 🔥 */
+    /* 1.0 = 原本大小 (100%) */
+    /* 1.2 = 放大 20% (120%) */
+    /* 1.5 = 放大 50% (150%) */
+    /* 試著修改這個數字來調整你想要的縮放程度 */
+    transform: scale(1); 
+    transition: transform 0.5s ease; /* 動畫效果：0.5秒內慢慢改變 */
+  }
+
+  .hero-img-frame:hover .hero-img {
+    transform: scale(1.2); /* 滑鼠移上去時，放大到 1.2 倍 */
+  }

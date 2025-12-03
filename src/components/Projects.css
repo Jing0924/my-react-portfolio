@@ -1,0 +1,62 @@
+/* src/components/Projects.css */
+
+.projects-section {
+    padding: 80px 20px;
+    background-color: #1a1a1a; /* 比背景稍微深一點或淺一點，做出區隔 */
+    color: white;
+    text-align: center;
+  }
+  
+  .projects-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #61dafb;
+  }
+  
+  /* 🔥 Grid 排版核心 🔥 */
+  .projects-grid {
+    display: grid;
+    /* 咒語解析：
+       repeat(auto-fit, ...): 自動填滿，能塞幾個就塞幾個
+       minmax(300px, 1fr): 每個卡片最小 300px，如果有剩餘空間就平均分配 (1fr)
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* 卡片之間的間距 */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 卡片樣式 */
+  .project-card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden; /* 讓圖片的圓角不會跑出去 */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* 卡片懸浮效果：稍微浮起來 */
+  .project-card:hover {
+    transform: translateY(-10px); /* 往上移 10px */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* 加上陰影 */
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 再次用到它！確保圖片填滿且不變形 */
+  }
+  
+  .project-info {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .project-info h3 {
+    margin-top: 0;
+    color: #eee;
+  }
+  
+  .project-info p {
+    color: #aaa;
+    font-size: 0.9rem;
+  }

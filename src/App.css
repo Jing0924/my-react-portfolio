@@ -1,0 +1,37 @@
+/* src/App.css */
+
+html {
+  scroll-behavior: smooth; /* 讓錨點連結變成平滑捲動 */
+  scroll-padding-top: 80px;
+}
+
+/* 1. 確保 Body 佔滿畫面且沒有白邊 */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #222; /* 確保背景色一致 */
+}
+
+/* 2. 確保你的 App 容器也是全寬 */
+.app-container {
+  text-align: center;
+  min-height: 100vh;
+  width: 100%; /* 強制全寬 */
+  padding-top: 80px;
+}
+
+/* 其他原本的樣式保持不變... */
+.main-content {
+  padding-top: 100px; 
+}
+
+.title {
+  color: #61dafb;
+  font-size: 3rem;
+}
+
+.subtitle {
+  color: white;
+  font-size: 1.2rem;
+}
