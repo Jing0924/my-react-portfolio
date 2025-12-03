@@ -3,6 +3,7 @@
 html {
   scroll-behavior: smooth; /* 讓錨點連結變成平滑捲動 */
   scroll-padding-top: 80px;
+  overflow-x: hidden; /* 🔥 關鍵：禁止左右滑動，防止動畫導致版面被撐開 */
 }
 
 /* 1. 確保 Body 佔滿畫面且沒有白邊 */
@@ -11,6 +12,7 @@ body {
   padding: 0;
   width: 100%;
   background-color: #222; /* 確保背景色一致 */
+  overflow-x: hidden; /* 🔥 關鍵：禁止左右滑動，防止動畫導致版面被撐開 */
 }
 
 /* 2. 確保你的 App 容器也是全寬 */
