@@ -32,8 +32,8 @@ function Projects() {
     <section id="projects" className="projects-section">
       <h2 className="projects-title">我的作品</h2>
       <div className="projects-grid">
-        {projectList.map((project) => (
-          <div className="project-card" key={project.title } data-aos="fade-up">
+        {projectList.map((project,index) => (
+          <div className="project-card" key={project.title } data-aos="fade-up" data-aos-delay={index * 100}>
             <img
               src={project.image}
               alt={project.title}
