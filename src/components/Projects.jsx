@@ -39,14 +39,22 @@ function Projects() {
       repoLink: "https://github.com/Jing0924/glass-login",
     },
     {
-      title: "天氣查詢 App",
+      title: "Markdown 筆記軟體",
       description:
-        "串接 OpenWeatherMap API，讓使用者輸入城市名稱即可查詢即時氣溫與濕度。",
-      tags: ["React", "API Fetch", "Async/Await"],
+        "支援 Markdown 語法即時預覽、搜尋過濾與 CRUD 功能。使用 React + TypeScript 開發，並透過 LocalStorage 實現自動存檔與資料持久化。",
+
+      // 👇 這裡展示了你用到的關鍵技術 (TypeScript 是加分項！)
+      tags: ["React", "TypeScript", "Markdown", "LocalStorage"],
+
+      // 👇 這是一張筆記/筆電風格的圖片
       image:
-        "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      demoLink: "#",
-      repoLink: "#",
+        "https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+
+      // 👇 【重要】請把這裡換成你剛剛在 Netlify 拿到的網址 (例如 https://jingde-notes.netlify.app)
+      demoLink: "https://heroic-panda-ebac69.netlify.app/",
+
+      // 👇 這是你剛剛推送到 GitHub 的網址
+      repoLink: "https://github.com/Jing0924/my-notes-app",
     },
   ];
 
