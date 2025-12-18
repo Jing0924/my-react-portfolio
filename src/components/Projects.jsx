@@ -22,6 +22,26 @@ function Projects() {
       demoLink: "https://golden-queijadas-9fa6d6.netlify.app/#contact", // 👈 新增：演示連結
       repoLink: "https://github.com/Jing0924/my-react-portfolio", // 👈 新增：程式碼連結
     },
+    // 👇 1. 新增：智慧分帳 App (放在第一個最顯眼)
+    {
+      title: "智慧分帳 App (Split Bill)",
+      description:
+        "解決團體旅遊分帳煩惱的 Web App。內建「自動債務簡化演算法」能計算出最少轉帳次數，並具備 Midnight Pro 深色模式與 RWD 響應式設計。",
+
+      // 👇 技術標籤：強調演算法 (Algorithm) 是加分項
+      tags: ["React", "Algorithm", "CSS Variables", "LocalStorage"],
+
+      // 👇 選了一張跟財務/計算相關的 Unsplash 圖片
+      image:
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+
+      // ⚠️ 請記得把這裡換成你剛剛部署好的 Netlify 網址
+      demoLink: "https://jing-splitbillapp.netlify.app/",
+
+      // ⚠️ 請記得把這裡換成你的 GitHub 網址
+      repoLink: "https://github.com/Jing0924/split-bill-app",
+    },
+
     {
       title: "毛玻璃特效登入頁",
       // 👇 描述改為強調 CSS 與視覺設計
