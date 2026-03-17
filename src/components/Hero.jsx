@@ -1,5 +1,6 @@
 // src/components/Hero.jsx
 import './Hero.css'
+import personalPhoto from '../assets/personal_photo.png';
 
 function Hero() {
   return (
@@ -11,7 +12,7 @@ function Hero() {
           前端工程師 / 求職者
         </p>
         <p className="hero-description">
-          這裡是用來練習 React 與 CSS 的個人網站。
+          這是我的作品集個人網站。<br />
           正在一步步打造屬於自己的數位名片！
         </p>
         <a href="#projects" className="hero-btn">看我的作品</a>
@@ -21,7 +22,7 @@ function Hero() {
       <div className="hero-image-container" data-aos="fade-left">
         <div className="hero-img-frame">
           <img 
-            src="https://p8.itc.cn/q_70/images03/20221012/f431503a85664b0ab618ac0aa2e905c3.jpeg" 
+            src={personalPhoto}
             alt="我的頭像" 
             className="hero-img" 
           />

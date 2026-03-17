@@ -6,7 +6,7 @@ function Contact() {
     <section id="contact" className="contact-section">
       <h2 className="section-title">聯絡我</h2>
       <p className="contact-text">
-        如果你有任何工作機會或想聊聊技術，歡迎隨時聯絡我！
+        如果你有任何工作機會或問題，歡迎隨時聯絡我！
       </p>
       
       <div className="contact-links">

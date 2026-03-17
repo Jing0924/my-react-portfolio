@@ -10,7 +10,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">我的網站</div>
+      <div className="navbar-logo">Jing的個人網站</div>
 
       {/* 4. 漢堡選單按鈕 (只在手機版顯示，CSS 會控制) */}
       <div className="menu-icon" onClick={toggleMenu}>

@@ -1,5 +1,5 @@
 // src/components/About.jsx
-import './About.css'
+import "./About.css";
 
 function About() {
   return (
@@ -7,16 +7,16 @@ function About() {
     <section id="about" className="about-section">
       <div className="about-container">
         <h2 className="section-title">關於我</h2>
-        
+
         <div className="about-content">
           <div className="about-text">
             <p>
-              你好！我是一個充滿熱情的網頁開發初學者。
-              雖然我才剛開始接觸 React，但我非常享受從無到有建立網站的過程。
+              你好！我是熱愛前端的開發者。 雖然剛開始接觸
+              React，但我已經動手打造了自己的作品集網站，享受從零到有完成每個功能的成就感。
             </p>
             <p>
-              目前的目標是熟練掌握前端三劍客 (HTML/CSS/JS)，
-              並深入學習現代化框架，希望能做出更多好用又好看的產品。
+              我專注掌握 HTML、CSS 與 JavaScript，持續學習現代化框架，
+              目標是做出既好用又好看的網頁產品，邊做邊學，不斷挑戰自我。
             </p>
           </div>
 
@@ -28,14 +28,13 @@ function About() {
               <span className="skill-tag">CSS3</span>
               <span className="skill-tag">JavaScript</span>
               <span className="skill-tag">React</span>
-              <span className="skill-tag">Tailwind (學習中)</span>
               <span className="skill-tag">Git</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;
