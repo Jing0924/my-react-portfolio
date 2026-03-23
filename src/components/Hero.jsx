@@ -1,35 +1,39 @@
 // src/components/Hero.jsx
-import './Hero.css'
-import personalPhoto from '../assets/personal_photo.png';
+import "./Hero.css";
+import personalPhoto from "../assets/personal_photo.png";
 
 function Hero() {
   return (
     <div id="home" className="hero">
-      {/* 左邊：文字介紹區 */}
       <div className="hero-content" data-aos="fade-right">
-        <h1 className="hero-title">Jing</h1>
-        <p className="hero-subtitle">
-          前端工程師 / 求職者
-        </p>
+        <p className="hero-eyebrow">Frontend Developer Portfolio</p>
+        <h1 className="hero-title">Jing Liao</h1>
+        <p className="hero-subtitle">React 前端工程師 | 求職中</p>
         <p className="hero-description">
-          這是我的作品集個人網站。<br />
-          正在一步步打造屬於自己的數位名片！
+          專注打造易用、響應式且具視覺質感的網頁產品，
+          透過實作專案持續累積前端開發與介面設計能力。
         </p>
-        <a href="#projects" className="hero-btn">看我的作品</a>
+        <div className="hero-actions">
+          <a href="#projects" className="hero-btn">
+            查看作品案例
+          </a>
+          <a href="#contact" className="hero-btn hero-btn-secondary">
+            聯絡我
+          </a>
+        </div>
       </div>
 
-      {/* 右邊：圖片區 */}
       <div className="hero-image-container" data-aos="fade-left">
         <div className="hero-img-frame">
-          <img 
+          <img
             src={personalPhoto}
-            alt="我的頭像" 
-            className="hero-img" 
+            alt="我的頭像"
+            className="hero-img"
           />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

@@ -1,33 +1,80 @@
 // src/components/Navbar.jsx
-import { useState } from 'react' // 1. 引入 useState
-import './Navbar.css' // 記得引入它的專屬樣式
+import { useEffect, useState } from "react";
+import "./Navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  const navItems = [
+    { id: "home", label: "首頁" },
+    { id: "about", label: "關於我" },
+    { id: "projects", label: "作品集" },
+    { id: "contact", label: "聯絡資訊" },
+  ];
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const sectionIds = navItems.map((item) => item.id);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleSection) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      {
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: [0.2, 0.4, 0.6],
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="navbar">
       <div className="navbar-logo">Jing的個人網站</div>
 
-      {/* 4. 漢堡選單按鈕 (只在手機版顯示，CSS 會控制) */}
-      <div className="menu-icon" onClick={toggleMenu}>
-        {/* 如果是開的顯示 "X"，如果是關的顯示 "☰" */}
+      <button
+        className="menu-icon"
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? "關閉選單" : "開啟選單"}
+        aria-expanded={isMenuOpen}
+      >
         {isMenuOpen ? "✕" : "☰"}
-      </div>
+      </button>
 
-      {/* 5. 關鍵邏輯：如果 isMenuOpen 是 true，就多加一個 "active" 的 class */}
       <ul className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
-        {/* 點擊連結後，順便把選單關起來，體驗比較好 */}
-        <li><a href="#home" onClick={() => setIsMenuOpen(false)}>首頁</a></li>
-        <li><a href="#about" onClick={() => setIsMenuOpen(false)}>關於我</a></li>
-        <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>作品集</a></li>
-        <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>聯絡資訊</a></li>
+        {navItems.map((item) => (
+          <li key={item.id}>
+            <a
+              href={`#${item.id}`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                setActiveSection(item.id);
+              }}
+              className={activeSection === item.id ? "is-active" : ""}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

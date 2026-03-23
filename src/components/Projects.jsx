@@ -14,6 +14,7 @@ function Projects() {
   const projectList = [
     {
       title: "個人作品集網站",
+      highlight: "AOS 動畫與響應式切版整合",
       description:
         "使用 React + Vite 從零打造的響應式個人網站，包含 AOS 動畫與深色模式設計。",
       tags: ["React", "CSS3", "RWD", "Netlify"], // 👈 新增：技術標籤
@@ -22,9 +23,21 @@ function Projects() {
       demoLink: "https://golden-queijadas-9fa6d6.netlify.app/#contact", // 👈 新增：演示連結
       repoLink: "https://github.com/Jing0924/my-react-portfolio", // 👈 新增：程式碼連結
     },
+    {
+      title: "電影書架網站（Cinema Shelf）",
+      highlight: "電影瀏覽與收藏介面設計實作",
+      description:
+        "使用 React 建置的電影書架網站，已部署到 Netlify，可在此查看功能與介面。",
+      tags: ["React", "Netlify", "RWD"],
+      image:
+        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop",
+      demoLink: "https://react-cineshelf.netlify.app/",
+      repoLink: "https://github.com/Jing0924/react-cineshelf",
+    },
     // 👇 1. 新增：智慧分帳 App (放在第一個最顯眼)
     {
       title: "智慧分帳 App (Split Bill)",
+      highlight: "債務簡化演算法降低轉帳次數",
       description:
         "解決團體旅遊分帳煩惱的 Web App。內建「自動債務簡化演算法」能計算出最少轉帳次數，並具備 Midnight Pro 深色模式與 RWD 響應式設計。",
 
@@ -44,6 +57,7 @@ function Projects() {
 
     {
       title: "毛玻璃特效登入頁",
+      highlight: "Glassmorphism 與動態背景互動效果",
       // 👇 描述改為強調 CSS 與視覺設計
       description:
         "專注於現代 UI 設計的練習。運用 CSS backdrop-filter 實現磨砂玻璃質感，並搭配 Keyframes 動畫製作漂浮背景。",
@@ -60,6 +74,7 @@ function Projects() {
     },
     {
       title: "Markdown 筆記軟體",
+      highlight: "即時預覽與 LocalStorage 持久化",
       description:
         "支援 Markdown 語法即時預覽、搜尋過濾與 CRUD 功能。使用 React + TypeScript 開發，並透過 LocalStorage 實現自動存檔與資料持久化。",
 
@@ -104,6 +119,7 @@ function Projects() {
             {/* 內容區 */}
             <div className="project-info">
               <h3>{project.title}</h3>
+              <p className="project-highlight">{project.highlight}</p>
               <p className="project-desc">{project.description}</p>
 
               {/* 技術標籤 */}
