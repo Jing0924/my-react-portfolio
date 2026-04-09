@@ -24,6 +24,26 @@ function Projects() {
       repoLink: "https://github.com/Jing0924/my-react-portfolio", // 👈 新增：程式碼連結
     },
     {
+      title: "LangAssist（語言輔助）",
+      highlight:
+        "Voice（Cloud STT／翻譯／TTS）＋ Speaking 文字串流與口說（Pipeline／Gemini Live）",
+      description:
+        "React + TypeScript + Vite 語言練習站。Voice 串接 Google Cloud 語音辨識、翻譯與朗讀；Speaking 整合 Gemini 串流對話、錄音→STT→模型→TTS 口說流程，以及 Gemini Live 即時語音。使用 React Router、Framer Motion。",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Google Cloud API",
+        "Gemini API",
+        "Framer Motion",
+        "React Router",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      demoLink: "https://langassist.netlify.app/speaking",
+      repoLink: "https://github.com/Jing0924/LangAssist",
+    },
+    {
       title: "電影書架網站（Cinema Shelf）",
       highlight: "電影瀏覽與收藏介面設計實作",
       description:
@@ -56,7 +76,7 @@ function Projects() {
     },
     {
       title: "EateryRoulette（附近餐廳轉盤）",
-      highlight: "依位置與篩選條件隨機抽出附近餐廳，並串接 Google Maps",
+      highlight: "依位置與篩選條件隨機抽出附近餐廳，串接 Google Maps",
       description:
         "支援瀏覽器定位與手動輸入地址，可依照距離、價位、評分與是否營業中等條件篩選，一鍵隨機抽出附近餐廳；整合 Google Maps 顯示地點與開啟導航，並以 toast 提示友善處理錯誤情境。",
       tags: ["React", "TypeScript", "Vite", "Google Maps API", "Netlify"],
@@ -64,24 +84,6 @@ function Projects() {
         "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
       demoLink: "https://eateryroulette.netlify.app/",
       repoLink: "https://github.com/Jing0924/EateryRoulette",
-    },
-    {
-      title: "LangAssist（語言輔助）",
-      highlight: "語音翻譯、單字、新聞與口說練習，並支援中英介面",
-      description:
-        "以 Vite + TypeScript 建置多頁路由的語言輔助 Web App，內建 i18next 繁中／英文介面；串接 Google Cloud 語音辨識、翻譯與文字轉語音，並透過 NewsAPI 取得科技新聞；介面輔以 Framer Motion 動畫層次。",
-      tags: [
-        "React",
-        "TypeScript",
-        "Vite",
-        "i18next",
-        "Google Cloud API",
-        "Framer Motion",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      demoLink: "https://langassist.netlify.app/voice",
-      repoLink: "https://github.com/Jing0924/LangAssist",
     },
 
     {
