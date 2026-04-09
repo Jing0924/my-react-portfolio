@@ -54,6 +54,35 @@ function Projects() {
       // ⚠️ 請記得把這裡換成你的 GitHub 網址
       repoLink: "https://github.com/Jing0924/split-bill-app",
     },
+    {
+      title: "EateryRoulette（附近餐廳轉盤）",
+      highlight: "依位置與篩選條件隨機抽出附近餐廳，並串接 Google Maps",
+      description:
+        "支援瀏覽器定位與手動輸入地址，可依照距離、價位、評分與是否營業中等條件篩選，一鍵隨機抽出附近餐廳；整合 Google Maps 顯示地點與開啟導航，並以 toast 提示友善處理錯誤情境。",
+      tags: ["React", "TypeScript", "Vite", "Google Maps API", "Netlify"],
+      image:
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      demoLink: "https://eateryroulette.netlify.app/",
+      repoLink: "https://github.com/Jing0924/EateryRoulette",
+    },
+    {
+      title: "LangAssist（語言輔助）",
+      highlight: "語音翻譯、單字、新聞與口說練習，並支援中英介面",
+      description:
+        "以 Vite + TypeScript 建置多頁路由的語言輔助 Web App，內建 i18next 繁中／英文介面；串接 Google Cloud 語音辨識、翻譯與文字轉語音，並透過 NewsAPI 取得科技新聞；介面輔以 Framer Motion 動畫層次。",
+      tags: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "i18next",
+        "Google Cloud API",
+        "Framer Motion",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      demoLink: "https://langassist.netlify.app/voice",
+      repoLink: "https://github.com/Jing0924/LangAssist",
+    },
 
     {
       title: "毛玻璃特效登入頁",
